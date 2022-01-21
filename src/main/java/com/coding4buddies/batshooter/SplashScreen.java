@@ -17,6 +17,7 @@ public class SplashScreen extends JFrame {
         
     // Setting up the Splash Screen
     public SplashScreen() {
+       progressBar.setForeground(Color.RED);
        this.setUndecorated(true);
        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        this.setSize(800, 500);
@@ -39,11 +40,16 @@ public class SplashScreen extends JFrame {
     
     // Method that insert the progress bar and label
     public void addLoading(){
-        label.setAlignmentX(Component.CENTER_ALIGNMENT);   
+        // Customize JLabel
+        label.setFont(new Font("Arial", Font.PLAIN, 18));
+        label.setForeground(Color.WHITE);
+        label.setAlignmentX(Component.CENTER_ALIGNMENT);  
+        
         progressBar.setMaximumSize(new Dimension(400,10));
         this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
         this.add(Box.createVerticalStrut(400));
         this.add(label);
+        this.add(Box.createVerticalStrut(10));
         this.add(progressBar); 
     }
     
@@ -54,7 +60,8 @@ public class SplashScreen extends JFrame {
             while(i <= 110){
                 checkPercent(i);
                 progressBar.setValue(i);
-                Thread.sleep(100);
+                //for animation
+                Thread.sleep(50);//100 milliseconds
                 i++;
             }
         } catch(Exception e){ }  

@@ -6,8 +6,6 @@
 
 package com.coding4buddies.batshooter;
 
-import javax.swing.SwingUtilities;
-
 public class Main {
     public static void main(String[] args) {
         // Calling the Splash Screen 
