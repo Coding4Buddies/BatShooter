@@ -31,7 +31,7 @@ public class SplashScreen extends JFrame {
         this.setContentPane(new JPanel() {
             @Override
             public void paintComponent(Graphics g) {
-               Image i = new ImageIcon("res/image_splash.jpeg").getImage();			   
+               Image i = new ImageIcon("res/image_splash.jpg").getImage();			   
                super.paintComponent(g);
                g.drawImage(i, 0, 0, null);
             }
