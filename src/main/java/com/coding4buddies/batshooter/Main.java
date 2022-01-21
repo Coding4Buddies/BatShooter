@@ -6,8 +6,14 @@
 
 package com.coding4buddies.batshooter;
 
+import javax.swing.SwingUtilities;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        // Calling the Splash Screen 
+        SplashScreen splashScreen = new SplashScreen();
+        splashScreen.setVisible(true);
+        splashScreen.iterate();
     }
+   
 }
