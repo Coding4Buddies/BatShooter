@@ -12,6 +12,6 @@ public class Main {
         SplashScreen splashScreen = new SplashScreen();
         splashScreen.setVisible(true);
         splashScreen.iterate();
+        splashScreen.changeText();
     }
-   
 }
