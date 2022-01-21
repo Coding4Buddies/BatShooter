@@ -45,9 +45,9 @@ public class SplashScreen extends JFrame {
         label.setForeground(Color.WHITE);
         label.setAlignmentX(Component.CENTER_ALIGNMENT);  
         
-        progressBar.setMaximumSize(new Dimension(400,10));
+        progressBar.setMaximumSize(new Dimension(350,10));
         this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
-        this.add(Box.createVerticalStrut(400));
+        this.add(Box.createVerticalStrut(350));
         this.add(label);
         this.add(Box.createVerticalStrut(10));
         this.add(progressBar); 
