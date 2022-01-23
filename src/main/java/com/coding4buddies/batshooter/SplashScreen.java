@@ -98,6 +98,7 @@ public class SplashScreen extends JFrame {
     // Method that checks the percent in the Progress Bar
     public void checkPercent(int percent){
         if(percent == 210) {
+            openMainScreen();
             closeSplashScreen();
         }
     }
@@ -105,6 +106,9 @@ public class SplashScreen extends JFrame {
     // Method that dispose and close the Splash Screen
     public void closeSplashScreen(){
         this.dispose();
-        System.exit(0);
+    }
+    
+    public void openMainScreen(){
+        new MainScreen();
     }
 }
