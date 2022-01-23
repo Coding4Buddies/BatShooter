@@ -13,6 +13,5 @@ public class Main {
         splashScreen.setVisible(true);
         splashScreen.iterate();
         splashScreen.changeText();
-        new MainScreen();
     }
 }
