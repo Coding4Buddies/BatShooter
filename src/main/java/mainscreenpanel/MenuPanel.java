@@ -52,6 +52,7 @@ public class MenuPanel extends JPanel {
    // Method for the settings of Play and Exit Button
    public void buttonSetting(JLabel label){
        Image button1 = new ImageIcon("res/button1.png").getImage().getScaledInstance(260, 90, Image.SCALE_SMOOTH);
+       label.setForeground(Color.BLACK);
        label.setAlignmentX(Component.CENTER_ALIGNMENT); 
        label.setHorizontalTextPosition(JLabel.CENTER);
        label.setCursor(new Cursor(Cursor.HAND_CURSOR));
