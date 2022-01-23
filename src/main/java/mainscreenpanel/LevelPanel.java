@@ -49,6 +49,7 @@ public class LevelPanel extends JPanel{
            lvl.setIcon(new ImageIcon(button));
            lvl.setAlignmentX(Component.CENTER_ALIGNMENT); 
            lvl.setHorizontalTextPosition(JLabel.CENTER);
+           lvl.setForeground(Color.BLACK);
            lvl.setCursor(new Cursor(Cursor.HAND_CURSOR));
            customFont(lvl);
            clickLevel(lvl);
@@ -76,9 +77,7 @@ public class LevelPanel extends JPanel{
             //register the font
             ge.registerFont(customFont);
             label.setFont(customFont);
-        } catch (IOException e ) {
-            e.printStackTrace();
-        } catch(FontFormatException e) {
+        } catch (IOException | FontFormatException e ) {
             e.printStackTrace();
         }
    }
