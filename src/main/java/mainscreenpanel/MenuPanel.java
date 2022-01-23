@@ -82,14 +82,13 @@ public class MenuPanel extends JPanel {
            @Override
            public void mousePressed(MouseEvent e) {
                if (jlabel.getText() == "PLAY") {
-                   System.out.println("PLAY");
+                   mainScreen.showView(new LevelPanel(mainScreen));
                } else if(jlabel.getText() == "EXIT") {
                    System.exit(0);
                }
            }
        });
    }
-   
    
    @Override
    // Method for Changing the Background Image of the Panel
