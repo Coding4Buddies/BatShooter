@@ -1,54 +1,54 @@
 /*
-    Date: January 24, 2021 
+    Date: January 24, 2021
     Created by: MinPen
     Purpose: Play Panel (Shoot the Bats that Move) for the MainScreen Frame
 */
 
 package mainscreenpanel;
 
-import com.coding4buddies.batshooter.MainScreen;
 import bat.*;
+import com.coding4buddies.batshooter.MainScreen;
 import weapon.Weapon;
 
-import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.stream.IntStream;
-import java.io.*;
 
 public class PlayPanel extends JPanel{
-    
-   // Initialize Needed Variables 
-   private MainScreen mainScreen;
-   int width, height;
-   private boolean isClick = false;
-   Weapon weapon = new Weapon();
-   LinkedList<Bat> batList = new LinkedList<>();
-   LinkedHashMap<String, Object> batReference;
 
-   
-   // Setting Up the Panel
-   public PlayPanel(MainScreen mainScreen, LinkedHashMap<String, Object> batReference) {
-       this.mainScreen = mainScreen;
-       width = this.mainScreen.getPreferredSize().width;
-       height = this.mainScreen.getPreferredSize().height;
-       this.batReference = batReference;
-       addBats();
-   }
-   
-   // Method that insert the bats in the LinkedList
-   public void addBats(){
-       IntStream.range(0, Integer.parseInt((String) batReference.get("PfiBat"))).forEach(i -> batList.add(new PfiBat()));
-       IntStream.range(0, Integer.parseInt((String) batReference.get("SputBat"))).forEach(i -> batList.add(new SputBat()));
-       IntStream.range(0, Integer.parseInt((String) batReference.get("ModernBat"))).forEach(i -> batList.add(new ModernBat()));
-       IntStream.range(0, Integer.parseInt((String) batReference.get("SinoBat"))).forEach(i -> batList.add(new SinoBat()));
-       IntStream.range(0, Integer.parseInt((String) batReference.get("CoBat"))).forEach(i -> batList.add(new CoBat()));
-   }
-   
-   @Override
-   // Method where the bat graphics are moving
-   public void paint(Graphics g) {
+    // Initialize Needed Variables
+    LinkedList<Bat> batList = new LinkedList<>();
+    LinkedHashMap<String, Object> batReference;
+    Weapon weapon = new Weapon();
+    MainScreen gameFrame;
+    private boolean isClick = false;
+    int width, height;
+
+    // Setting Up the Panel
+    public PlayPanel(MainScreen gameFrame, LinkedHashMap<String, Object> batReference){
+        this.gameFrame = gameFrame;
+        this.batReference = batReference;
+        width = gameFrame.getPreferredSize().width;
+        height = gameFrame.getPreferredSize().height;
+        addBats();
+    }
+
+    // Method that insert the bats in the LinkedList based on the JSON file
+    public void addBats(){
+        IntStream.range(0, Integer.parseInt((String) batReference.get("PfiBat"))).forEach(i -> batList.add(new PfiBat()));
+        IntStream.range(0, Integer.parseInt((String) batReference.get("SputBat"))).forEach(i -> batList.add(new SputBat()));
+        IntStream.range(0, Integer.parseInt((String) batReference.get("ModernBat"))).forEach(i -> batList.add(new ModernBat()));
+        IntStream.range(0, Integer.parseInt((String) batReference.get("SinoBat"))).forEach(i -> batList.add(new SinoBat()));
+        IntStream.range(0, Integer.parseInt((String) batReference.get("CoBat"))).forEach(i -> batList.add(new CoBat()));
+    }
+
+    @Override
+    // Method where the bat graphics are moving
+    public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g.create();
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -56,7 +56,6 @@ public class PlayPanel extends JPanel{
         for(Bat bat: batList){
             bat.paint(g2d);
             move(bat);
-            
             if(!isClick) {
                 clickBat(bat);
 
@@ -64,11 +63,12 @@ public class PlayPanel extends JPanel{
                     isClick = true;
                 }
             }
+            repaint();
         }
         g2d.dispose();
     }
-    
-   // Method that facilitates on how the bat moves
+
+    // Method that facilitates on how the bat moves
     public void move(Bat bat){
         Point p = bat.getLocation();
         Point speed = bat.getSpeed();
@@ -94,15 +94,8 @@ public class PlayPanel extends JPanel{
 
         bat.setSpeed(new Point(vx, vy));
         bat.setLocation(new Point(x, y));
-        
-        try {
-            Thread.sleep(8);
-            repaint();
-        } catch(Exception ex) {
-            ex.printStackTrace();
-        }
     }
-    
+
     // Method that executes when the bats are pressed
     public void clickBat(Bat bats) {
         isClick = false;
@@ -122,13 +115,12 @@ public class PlayPanel extends JPanel{
             }
         });
     }
-   
-   @Override
-   // Method for Changing the Background Image of the Panel
-   protected void paintComponent(Graphics g) {
-       super.paintComponent(g);
-       Image i = new ImageIcon("res/main_screen.jpg").getImage();
-       g.drawImage(i,0,0,width, height, null);
-   }
-    
+
+    @Override
+    // Method for Changing the Background Image of the Panel
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Image i = new ImageIcon("res/main_screen.jpg").getImage();
+        g.drawImage(i,0,0, width, height, null);
+    }
 }

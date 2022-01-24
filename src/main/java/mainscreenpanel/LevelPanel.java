@@ -7,6 +7,7 @@
 package mainscreenpanel;
 
 import com.coding4buddies.batshooter.MainScreen;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import gamedata.LevelSystem;
 import java.awt.*;
 import java.util.*;
@@ -63,8 +64,9 @@ public class LevelPanel extends JPanel{
        jlabel.addMouseListener(new MouseAdapter() {
            @Override
            public void mousePressed(MouseEvent e) {
-               LinkedHashMap<String, Object> numBats = (LinkedHashMap) levelSystem.getLevel().get(jlabel.getText());
-               mainScreen.showView(new PlayPanel(mainScreen,numBats));
+               LinkedHashMap<String, Object> numBats = new ObjectMapper().convertValue(
+                       levelSystem.getLevel().get(jlabel.getText()), LinkedHashMap.class);
+               mainScreen.showView(new PlayPanel(mainScreen, numBats));
            }
        });
    }
