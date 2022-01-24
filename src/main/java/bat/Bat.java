@@ -28,7 +28,7 @@ public class Bat {
      * Automatically set the location to random location within the screen
      */
     public Bat() { 
-        this.location = new Point(random(w - 150), random(h - 150));
+        this.location = new Point(random(w - 200), random(h - 200));
     }
     
     /**
