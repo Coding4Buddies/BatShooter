@@ -24,13 +24,13 @@ public class PlayPanel extends JPanel{
     LinkedList<Bat> batList = new LinkedList<>();
     LinkedHashMap<String, Object> batReference;
     Weapon weapon = new Weapon();
-    MainScreen gameFrame;
+    MainScreen mainScreen;
     private boolean isClick = false;
     int width, height;
 
     // Setting Up the Panel
     public PlayPanel(MainScreen gameFrame, LinkedHashMap<String, Object> batReference){
-        this.gameFrame = gameFrame;
+        this.mainScreen = gameFrame;
         this.batReference = batReference;
         width = gameFrame.getPreferredSize().width;
         height = gameFrame.getPreferredSize().height;
@@ -110,10 +110,16 @@ public class PlayPanel extends JPanel{
                         if(bats.getHealth() <= 0){
                             batList.remove(bats);
                         }
+                        finishGame();
                     }
                 }
             }
         });
+    }
+
+    public void finishGame(){
+        if (batList.isEmpty())
+            mainScreen.showView(new LevelPanel(mainScreen));
     }
 
     @Override
