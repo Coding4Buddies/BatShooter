@@ -8,6 +8,8 @@ package mainscreenpanel;
 
 import com.coding4buddies.batshooter.MainScreen;
 import bat.*;
+import weapon.Weapon;
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -21,6 +23,7 @@ public class PlayPanel extends JPanel{
    private MainScreen mainScreen;
    int width, height;
    private boolean isClick = false;
+   Weapon weapon = new Weapon();
    LinkedList<Bat> batList = new LinkedList<>();
    LinkedHashMap<String, Object> batReference;
 
@@ -102,7 +105,22 @@ public class PlayPanel extends JPanel{
     
     // Method that executes when the bats are pressed
     public void clickBat(Bat bats) {
-        
+        isClick = false;
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                if(bats != null && bats.getLocation() != null) {
+                    Point me = e.getPoint();
+                    Rectangle bounds = new Rectangle(bats.getLocation(), new Dimension(bats.getImage().getWidth(null), bats.getImage().getHeight(null)));
+                    if (bounds.contains(me)) {
+                        weapon.fire(bats);
+                        if(bats.getHealth() <= 0){
+                            batList.remove(bats);
+                        }
+                    }
+                }
+            }
+        });
     }
    
    @Override
