@@ -12,6 +12,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
+import java.util.stream.IntStream;
 import java.io.*;
 
 public class PlayPanel extends JPanel{
@@ -21,21 +22,25 @@ public class PlayPanel extends JPanel{
    int width, height;
    private boolean isClick = false;
    LinkedList<Bat> batList = new LinkedList<>();
+   LinkedHashMap<String, Object> batReference;
 
    
    // Setting Up the Panel
-   public PlayPanel(MainScreen mainScreen) {
+   public PlayPanel(MainScreen mainScreen, LinkedHashMap<String, Object> batReference) {
        this.mainScreen = mainScreen;
        width = this.mainScreen.getPreferredSize().width;
        height = this.mainScreen.getPreferredSize().height;
+       this.batReference = batReference;
        addBats();
    }
    
    // Method that insert the bats in the LinkedList
    public void addBats(){
-       for(int x = 0; x < 2; x++) {
-            batList.add(new CoBat());
-       }
+       IntStream.range(0, Integer.valueOf((String) batReference.get("PfiBat"))).forEach(i -> batList.add(new PfiBat()));
+       IntStream.range(0, Integer.valueOf((String) batReference.get("SputBat"))).forEach(i -> batList.add(new SputBat()));
+       IntStream.range(0, Integer.valueOf((String) batReference.get("ModernBat"))).forEach(i -> batList.add(new ModernBat()));
+       IntStream.range(0, Integer.valueOf((String) batReference.get("SinoBat"))).forEach(i -> batList.add(new SinoBat()));
+       IntStream.range(0, Integer.valueOf((String) batReference.get("CoBat"))).forEach(i -> batList.add(new CoBat()));
    }
    
    @Override
@@ -56,11 +61,6 @@ public class PlayPanel extends JPanel{
                     isClick = true;
                 }
             }
-            
-            try {
-                Thread.sleep(10);
-                repaint();
-            } catch(Exception ex) { }
         }
         g2d.dispose();
     }
@@ -91,23 +91,16 @@ public class PlayPanel extends JPanel{
 
         bat.setSpeed(new Point(vx, vy));
         bat.setLocation(new Point(x, y));
+        
+        try {
+            Thread.sleep(8);
+            repaint();
+        } catch(Exception ex) { }ß
     }
     
     // Method that executes when the bats are pressed
     public void clickBat(Bat bats) {
-        isClick = false;
-        addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                if(bats != null && bats.getLocation() != null) {
-                    Point me = e.getPoint();
-                    Rectangle bounds = new Rectangle(bats.getLocation(), new Dimension(bats.getImage().getWidth(null), bats.getImage().getHeight(null)));
-                    if (bounds.contains(me)) {
-                        System.out.println("Get Hit");
-                    }
-                }
-            }
-        });
+        
     }
    
    @Override
