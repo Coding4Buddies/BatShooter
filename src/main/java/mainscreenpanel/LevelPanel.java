@@ -63,7 +63,7 @@ public class LevelPanel extends JPanel{
        jlabel.addMouseListener(new MouseAdapter() {
            @Override
            public void mousePressed(MouseEvent e) {
-               System.out.println(jlabel.getText());
+               mainScreen.showView(new PlayPanel(mainScreen));
            }
        });
    }
