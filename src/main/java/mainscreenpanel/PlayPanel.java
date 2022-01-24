@@ -36,11 +36,11 @@ public class PlayPanel extends JPanel{
    
    // Method that insert the bats in the LinkedList
    public void addBats(){
-       IntStream.range(0, Integer.valueOf((String) batReference.get("PfiBat"))).forEach(i -> batList.add(new PfiBat()));
-       IntStream.range(0, Integer.valueOf((String) batReference.get("SputBat"))).forEach(i -> batList.add(new SputBat()));
-       IntStream.range(0, Integer.valueOf((String) batReference.get("ModernBat"))).forEach(i -> batList.add(new ModernBat()));
-       IntStream.range(0, Integer.valueOf((String) batReference.get("SinoBat"))).forEach(i -> batList.add(new SinoBat()));
-       IntStream.range(0, Integer.valueOf((String) batReference.get("CoBat"))).forEach(i -> batList.add(new CoBat()));
+       IntStream.range(0, Integer.parseInt((String) batReference.get("PfiBat"))).forEach(i -> batList.add(new PfiBat()));
+       IntStream.range(0, Integer.parseInt((String) batReference.get("SputBat"))).forEach(i -> batList.add(new SputBat()));
+       IntStream.range(0, Integer.parseInt((String) batReference.get("ModernBat"))).forEach(i -> batList.add(new ModernBat()));
+       IntStream.range(0, Integer.parseInt((String) batReference.get("SinoBat"))).forEach(i -> batList.add(new SinoBat()));
+       IntStream.range(0, Integer.parseInt((String) batReference.get("CoBat"))).forEach(i -> batList.add(new CoBat()));
    }
    
    @Override
@@ -95,7 +95,9 @@ public class PlayPanel extends JPanel{
         try {
             Thread.sleep(8);
             repaint();
-        } catch(Exception ex) { }ß
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        }
     }
     
     // Method that executes when the bats are pressed
