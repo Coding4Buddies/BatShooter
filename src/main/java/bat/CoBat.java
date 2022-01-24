@@ -15,10 +15,10 @@ public class CoBat extends Bat{
     // Setting up in the Constructor
     public CoBat() {
        super();
-       this.setSpeed(new Point(25,25));
+       this.setSpeed(new Point(4,4));
        this.setImage(new ImageIcon("res/bat/cobat.gif").getImage());
-       this.setHealth(500);
-       this.setMax_health(500);
+       this.setHealth(300);
+       this.setMax_health(300);
        this.setHealthBar(Color.RED);
    }
     

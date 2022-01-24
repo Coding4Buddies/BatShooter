@@ -15,10 +15,10 @@ public class SinoBat extends Bat{
     // Setting up in the Constructor
     public SinoBat() {
        super();
-       this.setSpeed(new Point(22,22));
+       this.setSpeed(new Point(3,3));
        this.setImage(new ImageIcon("res/bat/sinobat.gif").getImage());
-       this.setHealth(400);
-       this.setMax_health(400);
+       this.setHealth(250);
+       this.setMax_health(250);
        this.setHealthBar(Color.RED);
    }
 }

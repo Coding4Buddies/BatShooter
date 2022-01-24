@@ -16,7 +16,7 @@ public class PfiBat extends Bat {
    // Setting up in the Constructor
    public PfiBat() {
        super();
-       this.setSpeed(new Point(15,15));
+       this.setSpeed(new Point(1,1));
        this.setImage(new ImageIcon("res/bat/pfibat.gif").getImage());
        this.setHealth(100);
        this.setMax_health(100);

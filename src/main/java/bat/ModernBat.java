@@ -15,10 +15,10 @@ public class ModernBat extends Bat{
     // Setting up in the Constructor
     public ModernBat() {
        super();
-       this.setSpeed(new Point(18,20));
+       this.setSpeed(new Point(3,2));
        this.setImage(new ImageIcon("res/bat/modernbat.gif").getImage());
-       this.setHealth(300);
-       this.setMax_health(300);
+       this.setHealth(200);
+       this.setMax_health(200);
        this.setHealthBar(Color.RED);
    }
 }
