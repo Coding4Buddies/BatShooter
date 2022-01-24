@@ -1,6 +1,6 @@
 {
     "level 1": {
-        "PfiBat" : "0",
+        "PfiBat" : "10",
         "SputBat" : "0",
         "ModernBat" : "0",
         "SinoBat" : "0",
@@ -9,7 +9,7 @@
     
     "level 2": {
         "PfiBat" : "0",
-        "SputBat" : "0",
+        "SputBat" : "10",
         "ModernBat" : "0",
         "SinoBat" : "0",
         "CoBat" : "0"
@@ -18,7 +18,7 @@
     "level 3": {
         "PfiBat" : "0",
         "SputBat" : "0",
-        "ModernBat" : "0",
+        "ModernBat" : "10",
         "SinoBat" : "0",
         "CoBat" : "0"
     },
@@ -27,7 +27,7 @@
         "PfiBat" : "0",
         "SputBat" : "0",
         "ModernBat" : "0",
-        "SinoBat" : "0",
+        "SinoBat" : "10",
         "CoBat" : "0"
     },
     
@@ -36,38 +36,38 @@
         "SputBat" : "0",
         "ModernBat" : "0",
         "SinoBat" : "0",
-        "CoBat" : "0"
+        "CoBat" : "10"
     },
     
     "level 6": {
-        "PfiBat" : "0",
-        "SputBat" : "0",
-        "ModernBat" : "0",
-        "SinoBat" : "0",
-        "CoBat" : "0"
+        "PfiBat" : "2",
+        "SputBat" : "2",
+        "ModernBat" : "2",
+        "SinoBat" : "2",
+        "CoBat" : "2"
     },
     
     "level 7": {
-        "PfiBat" : "0",
-        "SputBat" : "0",
-        "ModernBat" : "0",
-        "SinoBat" : "0",
-        "CoBat" : "0"
+        "PfiBat" : "1",
+        "SputBat" : "4",
+        "ModernBat" : "2",
+        "SinoBat" : "2",
+        "CoBat" : "2"
     },
     
     "level 8": {
         "PfiBat" : "0",
-        "SputBat" : "0",
-        "ModernBat" : "0",
-        "SinoBat" : "0",
-        "CoBat" : "0"
+        "SputBat" : "1",
+        "ModernBat" : "2",
+        "SinoBat" : "5",
+        "CoBat" : "2"
     },
     
     "level 9": {
         "PfiBat" : "0",
         "SputBat" : "0",
-        "ModernBat" : "0",
-        "SinoBat" : "0",
-        "CoBat" : "0"
+        "ModernBat" : "2",
+        "SinoBat" : "2",
+        "CoBat" : "6"
     }
 }
