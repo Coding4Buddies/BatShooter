@@ -9,6 +9,8 @@ package mainscreenpanel;
 import com.coding4buddies.batshooter.MainScreen;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import gamedata.LevelSystem;
+import sharedmethods.Music;
+
 import java.awt.*;
 import java.util.*;
 import javax.swing.*;
@@ -28,6 +30,7 @@ public class LevelPanel extends JPanel{
        levelSystem = new LevelSystem();
        width = this.mainScreen.getPreferredSize().width;
        height = this.mainScreen.getPreferredSize().height;
+       new Music().shootEffect(this);
        initComponents();
    }
    
@@ -51,7 +54,6 @@ public class LevelPanel extends JPanel{
            lvl.setAlignmentX(Component.CENTER_ALIGNMENT); 
            lvl.setHorizontalTextPosition(JLabel.CENTER);
            lvl.setForeground(Color.BLACK);
-           lvl.setCursor(new Cursor(Cursor.HAND_CURSOR));
            customFont(lvl);
            clickLevel(lvl);
            this.add(lvl);

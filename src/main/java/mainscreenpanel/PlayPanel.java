@@ -8,6 +8,7 @@ package mainscreenpanel;
 
 import bat.*;
 import com.coding4buddies.batshooter.MainScreen;
+import sharedmethods.Music;
 import weapon.Weapon;
 
 import javax.swing.*;
@@ -23,6 +24,7 @@ public class PlayPanel extends JPanel{
     // Initialize Needed Variables
     LinkedList<Bat> batList = new LinkedList<>();
     LinkedHashMap<String, Object> batReference;
+    Music music = new Music();
     Weapon weapon = new Weapon();
     MainScreen mainScreen;
     private boolean isClick = false;
@@ -34,6 +36,7 @@ public class PlayPanel extends JPanel{
         this.batReference = batReference;
         width = gameFrame.getPreferredSize().width;
         height = gameFrame.getPreferredSize().height;
+        music.shootEffect(this);
         addBats();
     }
 
@@ -53,12 +56,11 @@ public class PlayPanel extends JPanel{
         Graphics2D g2d = (Graphics2D) g.create();
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        for(Bat bat: batList){
+        for(Bat bat: batList) {
             bat.paint(g2d);
             move(bat);
-            if(!isClick) {
+            if (!isClick) {
                 clickBat(bat);
-
                 if (bat == batList.getLast()) {
                     isClick = true;
                 }
@@ -106,6 +108,7 @@ public class PlayPanel extends JPanel{
                     Point me = e.getPoint();
                     Rectangle bounds = new Rectangle(bats.getLocation(), new Dimension(bats.getImage().getWidth(null), bats.getImage().getHeight(null)));
                     if (bounds.contains(me)) {
+                        music.soundEffect(bats.getSound(), -20f, false);
                         weapon.fire(bats);
                         if(bats.getHealth() <= 0){
                             batList.remove(bats);

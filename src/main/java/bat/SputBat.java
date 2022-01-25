@@ -19,6 +19,7 @@ public class SputBat extends Bat{
        this.setImage(new ImageIcon("res/bat/sputbat.gif").getImage());
        this.setHealth(150);
        this.setMax_health(150);
+       this.setSound("res/sound/bat_sound.wav");
        this.setHealthBar(Color.RED);
    }
 }

@@ -7,6 +7,7 @@
 package mainscreenpanel;
 
 import com.coding4buddies.batshooter.MainScreen;
+import sharedmethods.Music;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,6 +20,7 @@ public class CongratsPanel extends JPanel{
     
     // Initialize Needed Variables
     MainScreen mainScreen;
+    Music music = new Music();
     int width, height;
 
     // Setting Up the Panel
@@ -26,6 +28,8 @@ public class CongratsPanel extends JPanel{
         this.mainScreen = gameFrame;
         width = gameFrame.getPreferredSize().width;
         height = gameFrame.getPreferredSize().height;
+        music.soundEffect("res/sound/victory.wav", -5f, false);
+        music.shootEffect(this);
         initComponents();
     }
 
@@ -57,7 +61,6 @@ public class CongratsPanel extends JPanel{
         label.setForeground(Color.BLACK);
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
         label.setHorizontalTextPosition(JLabel.CENTER);
-        label.setCursor(new Cursor(Cursor.HAND_CURSOR));
         label.setIcon(new ImageIcon(button1));
         customFont(label);
     }
@@ -85,9 +88,7 @@ public class CongratsPanel extends JPanel{
             //register the font
             ge.registerFont(customFont);
             label.setFont(customFont);
-        } catch (IOException e ) {
-            e.printStackTrace();
-        } catch(FontFormatException e) {
+        } catch (IOException | FontFormatException e ) {
             e.printStackTrace();
         }
     }

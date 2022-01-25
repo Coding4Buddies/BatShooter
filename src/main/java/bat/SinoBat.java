@@ -19,6 +19,7 @@ public class SinoBat extends Bat{
        this.setImage(new ImageIcon("res/bat/sinobat.gif").getImage());
        this.setHealth(250);
        this.setMax_health(250);
+       this.setSound("res/sound/bat_sound.wav");
        this.setHealthBar(Color.RED);
    }
 }

@@ -20,6 +20,7 @@ public class PfiBat extends Bat {
        this.setImage(new ImageIcon("res/bat/pfibat.gif").getImage());
        this.setHealth(100);
        this.setMax_health(100);
+       this.setSound("res/sound/bat_sound.wav");
        this.setHealthBar(Color.RED);
    }
 }
