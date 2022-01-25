@@ -7,6 +7,8 @@
 package mainscreenpanel;
 
 import com.coding4buddies.batshooter.MainScreen;
+import sharedmethods.Music;
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -23,6 +25,7 @@ public class MenuPanel extends JPanel {
        this.mainScreen = mainScreen;
        width = this.mainScreen.getPreferredSize().width;
        height = this.mainScreen.getPreferredSize().height;
+       new Music().shootEffect(this);
        initComponents();
    }
    
@@ -55,7 +58,6 @@ public class MenuPanel extends JPanel {
        label.setForeground(Color.BLACK);
        label.setAlignmentX(Component.CENTER_ALIGNMENT); 
        label.setHorizontalTextPosition(JLabel.CENTER);
-       label.setCursor(new Cursor(Cursor.HAND_CURSOR));
        label.setIcon(new ImageIcon(button1));
        customFont(label);
    }
@@ -69,9 +71,7 @@ public class MenuPanel extends JPanel {
             //register the font
             ge.registerFont(customFont);
             label.setFont(customFont);
-        } catch (IOException e ) {
-            e.printStackTrace();
-        } catch(FontFormatException e) {
+        } catch (IOException | FontFormatException e ) {
             e.printStackTrace();
         }
    }
@@ -81,9 +81,9 @@ public class MenuPanel extends JPanel {
        jlabel.addMouseListener(new MouseAdapter() {
            @Override
            public void mousePressed(MouseEvent e) {
-               if (jlabel.getText() == "PLAY") {
+               if (jlabel.getText().equals("PLAY")) {
                    mainScreen.showView(new LevelPanel(mainScreen));
-               } else if(jlabel.getText() == "EXIT") {
+               } else if(jlabel.getText().equals("EXIT")) {
                    System.exit(0);
                }
            }
