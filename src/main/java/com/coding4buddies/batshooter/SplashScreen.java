@@ -50,8 +50,8 @@ public class SplashScreen extends JFrame {
 
         // Customize JProgressBar
         progressBar.setMaximumSize(new Dimension(350,10));
-        progressBar.setForeground(new Color(130, 192, 207));
-        progressBar.setBackground(new Color(12, 24,68));
+        progressBar.setBackground(new Color(251,204,115));
+        progressBar.setForeground(Color.BLACK);
         progressBar.setBorderPainted(false);
         progressBar.setAlignmentX(Component.CENTER_ALIGNMENT);
 
