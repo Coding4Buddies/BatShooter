@@ -16,15 +16,17 @@ import java.io.IOException;
 public class Music {
 
     // Method that creates a sound effect
-    public void soundEffect(String soundName){
+    public void soundEffect(String soundName, float volume, boolean loop){
         try {
             // Setting up the Audio for Background Music
             AudioInputStream audioInputStream2 = AudioSystem.getAudioInputStream(new File(soundName));
             Clip clip2 = AudioSystem.getClip();
             clip2.open(audioInputStream2);
+            // For Looping
+            if(loop) clip2.loop(Clip.LOOP_CONTINUOUSLY);
             // Adjust Sound
             FloatControl gainControl =  (FloatControl) clip2.getControl(FloatControl.Type.MASTER_GAIN);
-            gainControl.setValue(-20.0f);
+            gainControl.setValue(volume);
             // Start the Audio
             clip2.start();
         } catch (UnsupportedAudioFileException | LineUnavailableException | IOException e) {
@@ -38,8 +40,12 @@ public class Music {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                soundEffect("res/sound/shoot.wav");
+                soundEffect("res/sound/shoot.wav", -20f, false);
             }
         });
+    }
+
+    public void backgroundMusic() {
+        soundEffect("res/sound/background.wav", -18f, true);
     }
 }

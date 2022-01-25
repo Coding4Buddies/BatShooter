@@ -29,6 +29,7 @@ public class MainScreen extends JFrame{
        this.add(viewPanel, BorderLayout.CENTER);
        showView(new MenuPanel(this));
        customCursor();
+       new Music().backgroundMusic();
        this.setVisible(true);
        this.pack();
        this.setLocationRelativeTo(null);

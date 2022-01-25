@@ -108,7 +108,7 @@ public class PlayPanel extends JPanel{
                     Point me = e.getPoint();
                     Rectangle bounds = new Rectangle(bats.getLocation(), new Dimension(bats.getImage().getWidth(null), bats.getImage().getHeight(null)));
                     if (bounds.contains(me)) {
-                        music.soundEffect(bats.getSound());
+                        music.soundEffect(bats.getSound(), -20f, false);
                         weapon.fire(bats);
                         if(bats.getHealth() <= 0){
                             batList.remove(bats);

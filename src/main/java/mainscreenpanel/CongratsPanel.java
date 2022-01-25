@@ -20,6 +20,7 @@ public class CongratsPanel extends JPanel{
     
     // Initialize Needed Variables
     MainScreen mainScreen;
+    Music music = new Music();
     int width, height;
 
     // Setting Up the Panel
@@ -27,7 +28,8 @@ public class CongratsPanel extends JPanel{
         this.mainScreen = gameFrame;
         width = gameFrame.getPreferredSize().width;
         height = gameFrame.getPreferredSize().height;
-        new Music().shootEffect(this);
+        music.soundEffect("res/sound/victory.wav", -5f, false);
+        music.shootEffect(this);
         initComponents();
     }
 
