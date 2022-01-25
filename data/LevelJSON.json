@@ -1,5 +1,6 @@
 {
     "level 1": {
+        "BgImage": "res/FBackground.jpeg",
         "PfiBat" : "10",
         "SputBat" : "0",
         "ModernBat" : "0",
@@ -8,6 +9,7 @@
     },
     
     "level 2": {
+        "BgImage": "res/FBackground.jpeg",
         "PfiBat" : "0",
         "SputBat" : "10",
         "ModernBat" : "0",
@@ -16,6 +18,7 @@
     },
     
     "level 3": {
+        "BgImage": "res/FBackground.jpeg",
         "PfiBat" : "0",
         "SputBat" : "0",
         "ModernBat" : "10",
@@ -24,6 +27,7 @@
     },
     
     "level 4": {
+        "BgImage": "res/SBackground.jpeg",
         "PfiBat" : "0",
         "SputBat" : "0",
         "ModernBat" : "0",
@@ -32,6 +36,7 @@
     },
     
     "level 5": {
+        "BgImage": "res/SBackground.jpeg",
         "PfiBat" : "0",
         "SputBat" : "0",
         "ModernBat" : "0",
@@ -40,6 +45,7 @@
     },
     
     "level 6": {
+        "BgImage": "res/SBackground.jpeg",
         "PfiBat" : "2",
         "SputBat" : "2",
         "ModernBat" : "2",
@@ -48,6 +54,7 @@
     },
     
     "level 7": {
+        "BgImage": "res/LBackground.jpg",
         "PfiBat" : "1",
         "SputBat" : "4",
         "ModernBat" : "2",
@@ -56,6 +63,7 @@
     },
     
     "level 8": {
+        "BgImage": "res/LBackground.jpg",
         "PfiBat" : "0",
         "SputBat" : "1",
         "ModernBat" : "2",
@@ -64,6 +72,7 @@
     },
     
     "level 9": {
+        "BgImage": "res/LBackground.jpg",
         "PfiBat" : "0",
         "SputBat" : "0",
         "ModernBat" : "2",

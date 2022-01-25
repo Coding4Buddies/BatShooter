@@ -126,7 +126,7 @@ public class PlayPanel extends JPanel{
     // Method for Changing the Background Image of the Panel
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Image i = new ImageIcon("res/main_screen.jpg").getImage();
+        Image i = new ImageIcon((String) batReference.get("BgImage")).getImage();
         g.drawImage(i,0,0, width, height, null);
     }
 }
