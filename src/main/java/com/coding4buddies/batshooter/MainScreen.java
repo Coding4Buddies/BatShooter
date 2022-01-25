@@ -32,6 +32,7 @@ public class MainScreen extends JFrame{
        new Music().backgroundMusic();
        this.setVisible(true);
        this.pack();
+       this.setIconImage(Toolkit.getDefaultToolkit().getImage("res/icon.png"));
        this.setLocationRelativeTo(null);
        this.setResizable(false);
     }
