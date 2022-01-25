@@ -19,6 +19,7 @@ public class CoBat extends Bat{
        this.setImage(new ImageIcon("res/bat/cobat.gif").getImage());
        this.setHealth(300);
        this.setMax_health(300);
+       this.setSound("res/sound/bat_sound.wav");
        this.setHealthBar(Color.RED);
    }
     

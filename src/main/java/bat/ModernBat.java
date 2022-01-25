@@ -19,6 +19,7 @@ public class ModernBat extends Bat{
        this.setImage(new ImageIcon("res/bat/modernbat.gif").getImage());
        this.setHealth(200);
        this.setMax_health(200);
+       this.setSound("res/sound/bat_sound.wav");
        this.setHealthBar(Color.RED);
    }
 }

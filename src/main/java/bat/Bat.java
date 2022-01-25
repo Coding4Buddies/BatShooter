@@ -22,7 +22,8 @@ public class Bat {
     private Image image;
     private int health, max_health;
     private Color healthBar;
-    
+    private String sound;
+
     /**
      * Default Constructor
      * Automatically set the location to random location within the screen
@@ -121,7 +122,22 @@ public class Bat {
     public void setHealthBar(Color healthBar) {
         this.healthBar = healthBar;
     }
-    
+
+    /**
+     * @return the sound
+     */
+    public String getSound() {
+        return sound;
+    }
+
+    /**
+     * @param sound the sound to set
+     */
+    public void setSound(String sound) {
+        this.sound = sound;
+    }
+
+
     /**
      * Create Health Bar to Bat
      */
