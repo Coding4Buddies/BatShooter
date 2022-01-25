@@ -1,37 +1,82 @@
 {
     "level 1": {
-        
+        "BgImage": "res/FBackground.jpeg",
+        "PfiBat" : "10",
+        "SputBat" : "0",
+        "ModernBat" : "0",
+        "SinoBat" : "0",
+        "CoBat" : "0"
     },
     
     "level 2": {
-      
+        "BgImage": "res/FBackground.jpeg",
+        "PfiBat" : "0",
+        "SputBat" : "10",
+        "ModernBat" : "0",
+        "SinoBat" : "0",
+        "CoBat" : "0"
     },
     
     "level 3": {
-      
+        "BgImage": "res/FBackground.jpeg",
+        "PfiBat" : "0",
+        "SputBat" : "0",
+        "ModernBat" : "10",
+        "SinoBat" : "0",
+        "CoBat" : "0"
     },
     
     "level 4": {
-        
+        "BgImage": "res/SBackground.jpeg",
+        "PfiBat" : "0",
+        "SputBat" : "0",
+        "ModernBat" : "0",
+        "SinoBat" : "10",
+        "CoBat" : "0"
     },
     
     "level 5": {
-       
+        "BgImage": "res/SBackground.jpeg",
+        "PfiBat" : "0",
+        "SputBat" : "0",
+        "ModernBat" : "0",
+        "SinoBat" : "0",
+        "CoBat" : "10"
     },
     
     "level 6": {
-       
+        "BgImage": "res/SBackground.jpeg",
+        "PfiBat" : "2",
+        "SputBat" : "2",
+        "ModernBat" : "2",
+        "SinoBat" : "2",
+        "CoBat" : "2"
     },
     
     "level 7": {
-       
+        "BgImage": "res/LBackground.jpg",
+        "PfiBat" : "1",
+        "SputBat" : "4",
+        "ModernBat" : "2",
+        "SinoBat" : "2",
+        "CoBat" : "2"
     },
     
     "level 8": {
-       
+        "BgImage": "res/LBackground.jpg",
+        "PfiBat" : "0",
+        "SputBat" : "1",
+        "ModernBat" : "2",
+        "SinoBat" : "5",
+        "CoBat" : "2"
     },
     
     "level 9": {
-        
+        "BgImage": "res/LBackground.jpg",
+        "PfiBat" : "0",
+        "SputBat" : "0",
+        "ModernBat" : "2",
+        "SinoBat" : "2",
+        "CoBat" : "6"
     }
 }
