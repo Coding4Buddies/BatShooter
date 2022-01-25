@@ -117,9 +117,10 @@ public class PlayPanel extends JPanel{
         });
     }
 
+    // Method that executes when the bats are all killed
     public void finishGame(){
         if (batList.isEmpty())
-            mainScreen.showView(new LevelPanel(mainScreen));
+            mainScreen.showView(new CongratsPanel(mainScreen));
     }
 
     @Override
