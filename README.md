@@ -176,7 +176,7 @@ In the game, we used two ADT. One is a Linked List, which is responsible for sto
    }
    ```
    ```
-    // Passed the Linked Hash Map to Play Panel to Make the Panel Dynamic
+    // Passed the Linked Hash Map from Level Panel to Play Panel to Make the Panel Dynamic
     LinkedHashMap<String, Object> numBats = new ObjectMapper().convertValue(
                 levelSystem.getLevel().get(jlabel.getText()), LinkedHashMap.class);
     mainScreen.showView(new PlayPanel(mainScreen, numBats));
