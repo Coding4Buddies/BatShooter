@@ -221,7 +221,7 @@ We combined the lessons we learn from the HCI course on how to create the design
 </p>
 
 ## **Video Presentation**
-Here is the video link of our Game: [https://github.com/Coding4Buddies/BatShooter-Assets/raw/main/video_presentation/Bat%20Shooter%20Video1.m4v](Bat Shooter Presentation)
+Here is the video link of our Game: <a href="https://github.com/Coding4Buddies/BatShooter-Assets/raw/main/video_presentation/Bat%20Shooter%20Video1.m4v">Bat Shooter Presentation</a>
 
 ## **Members** 
 |                                                                                           | Username                                     | Position         |  
