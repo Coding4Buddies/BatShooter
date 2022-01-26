@@ -210,7 +210,7 @@ In the game, we used two ADT. One is a Linked List, which is responsible for sto
 
 ## Application of Computer Programming and HCI
 We combined the lessons we learn from the HCI course on how to create the design of layout and Computer Programming to bring the design to life.
-<p float="left">
+<p float="center">
 	<img src = "https://github.com/Coding4Buddies/BatShooter-Assets/blob/main/screen_shot/1.png" width="300">
 	<img src = "https://github.com/Coding4Buddies/BatShooter-Assets/blob/main/screen_shot/2.png" width="300">
     <img src = "https://github.com/Coding4Buddies/BatShooter-Assets/blob/main/screen_shot/3.png" width="300">
