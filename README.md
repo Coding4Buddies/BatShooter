@@ -207,7 +207,110 @@ In the game, we used two ADT. One is a Linked List, which is responsible for sto
         g.drawImage(i,0,0, width, height, null);
     }
    ```
-   
+## **Application of Object Oriented in the Game**
+Since there are 5 bats in the game that shares the same attributes and methods, we create a Bat parent class to handle this.
+```
++-- Bat (Parent Class)
+|   +-- PfiBat      
+|   +-- SputBat 
+|   +-- ModernBat
+|   +-- SinoBat
+|   +-- CoBat
+
+```
+
+Here are the attributes and methods for the Bat Parent Class
+
+```
+public class Bat {
+    private int w = 1080, h = 720;
+    private Point location, speed;
+    private Image image;
+    private int health, max_health;
+    private Color healthBar;
+    private String sound;
+
+    public Bat() { 
+        this.location = new Point(random(w - 200), random(h - 200));
+    }
+    
+    public int random(int i) {
+        return (int) Math.round(Math.random() * i);
+    }
+    
+    public void setLocation(Point location) {
+        this.location = location;
+    }
+
+    public Point getLocation() {
+        return location;
+    }
+
+    public Point getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(Point speed) {
+        this.speed = speed;
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public int getMax_health() {
+        return max_health;
+    }
+    
+    public void setMax_health(int max_health) {
+        this.max_health = max_health;
+    }
+    
+    public Color getHealthBar() {
+        return healthBar;
+    }
+
+    public void setHealthBar(Color healthBar) {
+        this.healthBar = healthBar;
+    }
+
+    public String getSound() {
+        return sound;
+    }
+
+    public void setSound(String sound) {
+        this.sound = sound;
+    }
+
+    public void createHealthBar(Graphics2D g, Bat bat) {
+        Point p = bat.getLocation();
+        g.setColor(getHealthBar());
+        g.fillRect(p.x + 28, p.y + 145, (100 * bat.getHealth()) / bat.getMax_health(), 5);
+        g.drawRect(p.x + 28, p.y + 145, 100, 5);
+    }
+
+    public void paint(Graphics2D g) {
+        Point p = getLocation();
+        if(p != null) {
+            g.drawImage(getImage(), p.x, p.y, null);
+            createHealthBar(g, this);
+        }
+    }
+}
+
+```
 
 ## **Application of Computer Programming and HCI in the Game** ☀️
 We combined the lessons we learn from the HCI course on how to create the design and Computer Programming to bring the design to life.
