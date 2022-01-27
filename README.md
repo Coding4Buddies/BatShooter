@@ -23,7 +23,7 @@
 6. And after that you will choose 'Play Again' or 'Back to Menu'
 7. Play Again if you want to proceed to another level and Back to Menu if you want to exit the game.
 
-## **Bat Stats**
+## **Bat Stats** 🦇
 We make the name of each bat related on the name of the vaccines and also Our Lead Designer design these Bats GIF!!
 |      Image                                                                                | Name              | Health        | Speed X        | Speed Y     | 
 | :---:                                                                                     | :----:            | :---:         |:---:           | :---:       |
@@ -35,7 +35,7 @@ We make the name of each bat related on the name of the vaccines and also Our Le
 
 
 
-## **Level System**
+## **Level System** ☝️
 The number of bats that are present in the game is based on the data inside the LevelJSON.json File. You can change these data inside and will affect the bats that are present in each level.
 ```
 {
@@ -123,7 +123,7 @@ The number of bats that are present in the game is based on the data inside the 
 ```
 `Take Note: Follow on how the File is formatted and once you input something wrong, the program will surely crash. Ps. Didnt put Try and Catch in that line of code`
 
-## Application of Data Structure in the Game
+## **Application of Data Structure in the Game** 💾
 In the game, we used two ADT. One is a Linked List, which is responsible for storing, displaying and removing the bats in the game, and the other is a linked hash map, which is used to read the JSON file mentioned above.
 
    ### Linked List (PlayPanel.java)
@@ -209,7 +209,7 @@ In the game, we used two ADT. One is a Linked List, which is responsible for sto
    ```
    
 
-## Application of Computer Programming and HCI in the Game
+## **Application of Computer Programming and HCI in the Game** ☀️
 We combined the lessons we learn from the HCI course on how to create the design and Computer Programming to bring the design to life.
 <p float="center">
 	<img src = "https://github.com/Coding4Buddies/BatShooter-Assets/blob/main/screen_shot/1.png" width="400">
@@ -220,10 +220,10 @@ We combined the lessons we learn from the HCI course on how to create the design
     <img src = "https://github.com/Coding4Buddies/BatShooter-Assets/blob/main/screen_shot/6.png" width="400">
 </p>
 
-## **Video Presentation**
+## **Video Presentation** 🎥
 Here is the video link of our Game: <a href="https://github.com/Coding4Buddies/BatShooter-Assets/raw/main/video_presentation/Bat%20Shooter%20Video1.m4v">Bat Shooter Presentation</a>
 
-## **Members** 
+## **Members** 🧑🏻‍🤝‍🧑🏻
 |                                                                                           | Username                                     | Position         |  
 | :---:                                                                                     | :----:                                       |:----:            | 
 | ![Jookie262](https://avatars.githubusercontent.com/u/62915062?s=70&v=4)                   | [Jookie262](https://github.com/Jookie262)    |Lead Programmer   | 
@@ -231,7 +231,7 @@ Here is the video link of our Game: <a href="https://github.com/Coding4Buddies/B
 | ![MinPen](https://avatars.githubusercontent.com/u/93776264?s=70&v=4)                      | [MinPen](https://github.com/nickichann01)    |Graphics          |
 | ![OmiAtsu](https://avatars.githubusercontent.com/u/98083930?s=70&v=4)                     | [OmiAtsu](https://github.com/OmiAtsu)        |Tester            |
 
-## **Disclaimer**
+## **Disclaimer** ✨
 The background music and graphics are not our property. We credited it to the rightful owner. Only for Educational Purposes.
 
 ## **Contribution** 🔥
