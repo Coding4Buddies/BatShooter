@@ -218,7 +218,7 @@ Since there are 5 bats in the game that shares the same attributes and methods, 
 |   +-- CoBat
 ```
 
-Here are the attributes and methods for the Bat Parent Class
+Here are the attributes and methods of the Bat Parent Class
 
 ```
 public class Bat {
@@ -329,7 +329,7 @@ Here is the video link of our Game: <a href="https://github.com/Coding4Buddies/B
 |                                                                                           | Username                                     | Position         |  
 | :---:                                                                                     | :----:                                       |:----:            | 
 | ![Jookie262](https://avatars.githubusercontent.com/u/62915062?s=70&v=4)                   | [Jookie262](https://github.com/Jookie262)    |Lead Programmer   | 
-| ![Jazzy](https://avatars.githubusercontent.com/u/92165870?s=70&v=4)                       | [Jazzy](https://github.com/jazzy-bella)      |Lead Designer     |
+| ![shng7](https://avatars.githubusercontent.com/u/92165870?s=70&v=4)                       | [shng7](https://github.com/shng7)            |Lead Designer     |
 | ![MinPen](https://avatars.githubusercontent.com/u/93776264?s=70&v=4)                      | [MinPen](https://github.com/nickichann01)    |Graphics          |
 | ![OmiAtsu](https://avatars.githubusercontent.com/u/98083930?s=70&v=4)                     | [OmiAtsu](https://github.com/OmiAtsu)        |Tester            |
 
