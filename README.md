@@ -207,7 +207,7 @@ In the game, we used two ADT. One is a Linked List, which is responsible for sto
         g.drawImage(i,0,0, width, height, null);
     }
    ```
-## **Application of Object Oriented in the Game**
+## **Application of Object Oriented in the Game** 🎇
 Since there are 5 bats in the game that shares the same attributes and methods, we create a Bat parent class to handle this.
 ```
 +-- Bat (Parent Class)
@@ -216,7 +216,6 @@ Since there are 5 bats in the game that shares the same attributes and methods, 
 |   +-- ModernBat
 |   +-- SinoBat
 |   +-- CoBat
-
 ```
 
 Here are the attributes and methods for the Bat Parent Class
