@@ -1,6 +1,7 @@
 <h4 align=center>
     <img src="https://github.com/Coding4Buddies/BatShooter-Assets/blob/main/main_screen/logo.png?raw=true" width="600">
     <br>
+    <img alt="License" src="https://img.shields.io/github/license/coding4buddies/Batshooter?style=for-the-badge">
     <a href="https://github.com/Coding4Buddies/BatShooter/releases/download/v.1.0/BatShooter.v.1.0.rar">
     	<img alt="Download" src="https://img.shields.io/static/v1?label=Download&message=Jar&logoColor=white&color=yellow&style=for-the-badge">
     </a>
@@ -121,7 +122,7 @@ The number of bats that are present in the game is based on the data inside the 
     }
 }
 ```
-`Take Note: Follow on how the File is formatted and once you input something wrong, the program will surely crash. Ps. Didnt put Try and Catch in that line of code`
+`Take Note: Follow on how the File is formatted and once you input something wrong, the program will not run`
 
 ## **Application of Data Structure in the Game** 💾
 In the game, we used two ADT. One is a Linked List, which is responsible for storing, displaying and removing the bats in the game, and the other is a linked hash map, which is used to read the JSON file mentioned above.
