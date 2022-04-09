@@ -209,7 +209,7 @@ In the game, we used two ADT. One is a Linked List, which is responsible for sto
     }
    ```
 ## **Application of Object Oriented in the Game** 🎇
-Since there are 5 bats in the game that shares the same attributes and methods, we create a Bat parent class to handle this.
+Since there are 5 bats in the game that shares the same attributes and methods, we create a Bat parent class to handle this. Additionally, we also create a weapon class for handling the damage.
 ```
 +-- Bat (Parent Class)
 |   +-- PfiBat      
@@ -217,6 +217,7 @@ Since there are 5 bats in the game that shares the same attributes and methods, 
 |   +-- ModernBat
 |   +-- SinoBat
 |   +-- CoBat
++-- Weapon
 ```
 
 Here are the attributes and methods of the Bat Parent Class
@@ -307,6 +308,27 @@ public class Bat {
             g.drawImage(getImage(), p.x, p.y, null);
             createHealthBar(g, this);
         }
+    }
+}
+
+```
+Here are the attribute and methods of the Weapon Class
+
+```
+public class Weapon {
+
+    private int damage;
+
+    public Weapon() {
+        this.damage = 20;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public void fire(Bat bat) {
+        bat.setHealth(bat.getHealth() - getDamage());
     }
 }
 
