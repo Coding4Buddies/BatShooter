@@ -357,7 +357,7 @@ Here is the video link of our Game: <a href="https://github.com/Coding4Buddies/B
 | ![OmiAtsu](https://avatars.githubusercontent.com/u/98083930?s=70&v=4)                     | [OmiAtsu](https://github.com/OmiAtsu)        |Tester            |
 
 ## **Disclaimer** ✨
-The background music and images are not our property. We credited it to the rightful owner. Only for Educational Purposes.
+The background music and images are not our property. We use it only for Educational Purposes.
 
 ## **Contribution** 🔥
 If you wish to help improve this project, fork this repo and submit your own pull request. If you discover a problem with this project, please report it to the issue page. Thank you very much   😊.
