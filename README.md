@@ -25,7 +25,7 @@
 7. Play Again if you want to proceed to another level and Back to Menu if you want to exit the game.
 
 ## **Bat Stats** 🦇
-We make the name of each bat related on the name of the vaccines and also Our Lead Designer design these Bats GIF!!
+Each bat is named based on the current pandemic, and our lead designer created this GIFs!!
 |      Image                                                                                | Name              | Health        | Speed X        | Speed Y     | 
 | :---:                                                                                     | :----:            | :---:         |:---:           | :---:       |
 | ![PfiBat](https://github.com/Coding4Buddies/BatShooter-Assets/blob/main/PfiBat.gif)       | PfiBat            | 100           |1               | 1           |
