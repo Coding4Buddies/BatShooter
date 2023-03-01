@@ -38,7 +38,7 @@ Each bat is named based on the current pandemic, and our lead designer created t
 
 ## **Level System** ☝️
 The number of bats that are present in the game is based on the data inside the LevelJSON.json File. You can change these data inside and will affect the bats that are present in each level.
-```
+```JSON
 {
     "level 1": {
         "BgImage": "res/FBackground.jpeg",
@@ -128,10 +128,10 @@ The number of bats that are present in the game is based on the data inside the 
 In the game, we used two ADT. One is a Linked List, which is responsible for storing, displaying and removing the bats in the game, and the other is a linked hash map, which is used to read the JSON file mentioned above.
 
    ### Linked List (PlayPanel.java)
-   ```
+   ``` java
     LinkedList<Bat> batList = new LinkedList<>();
    ```
-   ```
+   ```java
     // Method that insert the bats in the LinkedList based on the JSON file
     public void addBats(){
         IntStream.range(0, Integer.parseInt((String) batReference.get("PfiBat"))).forEach(i -> batList.add(new PfiBat()));
@@ -141,7 +141,7 @@ In the game, we used two ADT. One is a Linked List, which is responsible for sto
         IntStream.range(0, Integer.parseInt((String) batReference.get("CoBat"))).forEach(i -> batList.add(new CoBat()));
     }
    ```
-   ```
+   ```java
     // Shows/Paints the bat based on the number inside the batList Linked List
     for(Bat bat: batList) {
         bat.paint(g2d);
@@ -156,14 +156,14 @@ In the game, we used two ADT. One is a Linked List, which is responsible for sto
         repaint();
     }
    ```
-   ```
+   ```java
    // Remove the Bats from Linked List when health reach to 0 or negative
    if(bats.getHealth() <= 0){
       batList.remove(bats);
    }
    ```
    ### Linked Hash Map (LevelSystem, LevelPanel, PlayPanel)
-   ```
+   ``` java
    // Uses Dependecy to Get the Data in JSON File and Store inside the Level Map
    Map<String, Object> level;
       
@@ -177,13 +177,13 @@ In the game, we used two ADT. One is a Linked List, which is responsible for sto
     }
    }
    ```
-   ```
+   ``` java
     // Passed the Linked Hash Map from Level Panel to Play Panel to Make the Panel Dynamic
     LinkedHashMap<String, Object> numBats = new ObjectMapper().convertValue(
                 levelSystem.getLevel().get(jlabel.getText()), LinkedHashMap.class);
     mainScreen.showView(new PlayPanel(mainScreen, numBats));
    ```
-   ```
+   ``` java
     // Initialize LinkedHashMap
     LinkedHashMap<String, Object> batReference;
     
@@ -222,7 +222,7 @@ Since there are 5 bats in the game that shares the same attributes and methods, 
 
 Here are the attributes and methods of the Bat Parent Class
 
-```
+```java
 public class Bat {
     private int w = 1080, h = 720;
     private Point location, speed;
@@ -314,7 +314,7 @@ public class Bat {
 ```
 Here are the attribute and methods of the Weapon Class
 
-```
+``` java
 public class Weapon {
 
     private int damage;
